@@ -1,0 +1,89 @@
+name: Bug report
+description: Report something that is broken or not working as expected.
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form to report a confirmed or suspected bug.
+
+        Do not include passwords, tokens, secrets, customer-sensitive data or production credentials.
+
+  - type: input
+    id: summary
+    attributes:
+      label: Summary
+      description: Briefly describe the issue.
+      placeholder: Example: Login fails after entering a valid one-time code.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behaviour
+      description: What should have happened?
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behaviour
+      description: What actually happened?
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Provide clear steps so someone else can reproduce the issue.
+      placeholder: |
+        1. Go to...
+        2. Click...
+        3. Enter...
+        4. See error...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: impact
+    attributes:
+      label: Impact
+      description: How serious is this issue?
+      options:
+        - Low - inconvenience only
+        - Medium - feature affected but workaround exists
+        - High - major feature broken
+        - Critical - security, data loss or production outage
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Add screenshots, logs or error messages if helpful. Remove any secrets first.
+    validations:
+      required: false
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Browser, device, operating system, service, branch or deployment environment.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Safety checks
+      options:
+        - label: I have not included secrets, passwords, tokens or private customer data.
+          required: true
+        - label: I have searched existing issues before raising this.
+          required: true
