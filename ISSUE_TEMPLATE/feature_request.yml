@@ -1,0 +1,89 @@
+name: Feature request
+description: Suggest a new feature, improvement or enhancement.
+title: "[Feature]: "
+labels:
+  - enhancement
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form to suggest a new feature or improvement.
+
+        Do not include secrets, passwords, tokens, customer-sensitive data or production credentials.
+
+  - type: input
+    id: summary
+    attributes:
+      label: Summary
+      description: Briefly describe the feature or improvement.
+      placeholder: Example: Add export options to the reporting dashboard.
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or opportunity
+      description: What problem does this solve, or what opportunity does it create?
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed-solution
+    attributes:
+      label: Proposed solution
+      description: Describe how you think this should work.
+    validations:
+      required: true
+
+  - type: textarea
+    id: user-value
+    attributes:
+      label: User value
+      description: Who benefits from this, and how?
+      placeholder: Example: This helps administrators understand risk faster without manually reviewing every record.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: How important is this?
+      options:
+        - Low - nice to have
+        - Medium - useful improvement
+        - High - important for delivery or user experience
+        - Critical - blocks delivery or major business value
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance criteria
+      description: What must be true for this to be considered complete?
+      placeholder: |
+        - Users can...
+        - The system shows...
+        - The change works when...
+    validations:
+      required: false
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional notes
+      description: Add any links, screenshots, mock-ups or context that may help.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Safety checks
+      options:
+        - label: I have not included secrets, passwords, tokens or private customer data.
+          required: true
+        - label: I have checked whether a similar request already exists.
+          required: true
