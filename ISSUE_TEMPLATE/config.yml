@@ -1,0 +1,10 @@
+blank_issues_enabled: false
+
+contact_links:
+  - name: Security issue
+    url: https://github.com/Who2Global/.github/security/policy
+    about: Please do not raise public issues for security vulnerabilities. Use the security policy instead.
+
+  - name: General support
+    url: https://github.com/Who2Global/.github
+    about: For general support, refer to the organisation guidance before opening an issue.
